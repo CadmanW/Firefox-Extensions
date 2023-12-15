@@ -1,2 +1,2 @@
 # Firefox-Extensions
- Extensions I have made for firefox
+Extensions I have made for firefox

@@ -5,8 +5,11 @@ function darkModeStyle(el, color, backgroundColor) {
 
 function darkMode() {
 
+    document.querySelector("#content").style.backgroundColor = "rgb(60, 60, 60)";
+    darkModeStyle(document.querySelector("#attByClass"), 200, 70);
+
     for (const element of document.querySelectorAll("#content-main, .selected, #usercontext-bar, .multitabs-common-label")) {
-        darkModeStyle(element, 230, 60);
+        darkModeStyle(element, 200, 60);
     }
 
     for (const element of document.querySelectorAll("b")) {
@@ -14,23 +17,42 @@ function darkMode() {
     }
 
     for (const element of document.querySelectorAll("#branding-powerschool")) {
-        darkModeStyle(element, 230, 80);
+        darkModeStyle(element, 200, 80);
     }
 
     for (const element of document.querySelector("#tools").querySelectorAll("li, a")) {
-        darkModeStyle(element, 230, 80);
+        darkModeStyle(element, 200, 80);
     }
 
     for (const element of document.querySelectorAll("#nav-main")) {
-        darkModeStyle(element, 230, 40);
+        darkModeStyle(element, 200, 50);
     }
 
     for (const element of document.querySelectorAll("#btnContMax")) {
-        darkModeStyle(element, 230, 20);
+        darkModeStyle(element, 200, 30);
     }
 
     for (const element of document.querySelectorAll("#btnNoNav")) {
-        darkModeStyle(element, 230, 2550);
+        darkModeStyle(element, 200, 255);
+    }
+
+    for (const element of document.querySelector("#nav-main").querySelectorAll("a")) {
+        console.log(element);
+        element.style.color = "rgb(200, 200, 200)";
+    }
+
+    for (const element of document.querySelectorAll("th")) {
+        darkModeStyle(element, 200, 70);
+        for (const anchorEl of element.querySelectorAll("a")) {
+            darkModeStyle(anchorEl, 200, 80)
+        }
+    }
+
+    for (const element of document.querySelectorAll("td")) {
+        darkModeStyle(element, 200, 80);
+        for (const anchorEl of element.querySelectorAll("a")) {
+            darkModeStyle(anchorEl, 200, 80)
+        }
     }
 }
 
