@@ -1,0 +1,22 @@
+{
+    "author": "Cadman Warren",
+    "description": "An extention for scoreboard.uscyberpatriot.org/index.php (! NOT MADE BY OR ENDORSED BY THE OFFICIAL CYBERPATRIOT TEAM !)",
+    "developer": {"name": "Cadman Warren"},
+    "icons": {"48": "icons/cyberPatriotIcon.png", "98": "icons/cyberPatriotIcon.png"},
+    "manifest_version": 2,
+    "name": "CyberPatriot Coach Assistant",
+    "version": "1.0",
+
+    "permissions": ["contextMenus"],
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://scoreboard.uscyberpatriot.org/*"],
+            "js": ["content.js"]
+        }
+    ]
+}

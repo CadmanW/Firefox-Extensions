@@ -1,0 +1,22 @@
+{
+    "author": "Cadman Warren",
+    "description": "Click the extension icon to turn on/off darkmode in powerschool",
+    "developer": {"name": "Cadman Warren"},
+    "icons": {"48": "icons/moon.png", "98": "icons/moon.png"},
+    "manifest_version": 2,
+    "name": "Powerschool Dark mode",
+    "version": "1.0",
+
+    "permissions": ["contextMenus"],
+
+    "content_scripts": [
+        {
+            "matches": ["*://pcsstn.powerschool.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
